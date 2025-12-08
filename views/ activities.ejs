@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<h2>All Activities</h2>
+
+<ul>
+  <% if (activities.length === 0) { %>
+    <p>No activities found.</p>
+  <% } else { %>
+    <% activities.forEach(a => { %>
+      <li>
+        <strong><%= a.type %></strong> — <%= a.date %>
+        <br>Duration: <%= a.duration %> minutes
+        <br>Calories: <%= a.calories %>
+        <br>Notes: <%= a.notes %>
+        <hr>
+      </li>
+    <% }) %>
+  <% } %>
+</ul>
+
+<%- include('partials/footer') %>
