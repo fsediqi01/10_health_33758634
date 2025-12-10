@@ -1,24 +1,18 @@
-<%- include('partials/header') %>
-
+<%- include('partials/header') %> 
 <h2>Add Activity</h2>
+ <form method="POST" action="/cgi-bin/node/10_health_33758634/index.js/activities/add">
 
-<form method="POST" action="/activities/add">
     <label>Date:</label>
     <input type="date" name="date" required>
 
     <label>Activity Type:</label>
-    <input type="text" name="type" placeholder="Running, Cycling, Gym..." required>
-
-    <label>Duration (minutes):</label>
+    <input type="text" name="type" placeholder="Running, Cycling, Gym..." required> <label>Duration (minutes):</label>
     <input type="number" name="duration" required>
-
     <label>Calories Burned:</label>
     <input type="number" name="calories">
-
     <label>Notes:</label>
     <textarea name="notes" placeholder="Optional details..."></textarea>
 
     <button type="submit">Save Activity</button>
-</form>
-
+ </form>
 <%- include('partials/footer') %>
