@@ -1,15 +1,16 @@
-<%- include('partials/header') %>
+<%- include('header') %>
 
 <h2>Search Activities</h2>
 
-<form method="POST" action="/activities/search">
-    <label>Activity Type:</label>
-    <input type="text" name="type" placeholder="Running">
+<form action="/activities/search" method="POST">
+    <label>Type:</label>
+    <input type="text" name="type"><br><br>
 
-    <label>Keyword in Notes:</label>
-    <input type="text" name="keyword" placeholder="morning">
+    <label>Keyword (in notes):</label>
+    <input type="text" name="keyword"><br><br>
 
     <button type="submit">Search</button>
 </form>
 
-<%- include('partials/footer') %>
+<%- include('footer') %>
+

@@ -3,6 +3,7 @@ const router = express.Router();
 
 // ADD ACTIVITY — Show form
 router.get('/add', (req, res) => {
+    console.log('GET /activities/add hit');  // debug
     res.render('add');
 });
 
@@ -15,7 +16,7 @@ router.post('/add', (req, res) => {
         VALUES (?, ?, ?, ?, ?)
     `;
 
-    db.query(sql, [date, type, duration, calories, notes], (err, result) => {
+    db.query(sql, [date, type, duration, calories, notes], (err) => {
         if (err) throw err;
         res.redirect('/activities/list');
     });
@@ -23,7 +24,8 @@ router.post('/add', (req, res) => {
 
 // LIST ALL ACTIVITIES
 router.get('/list', (req, res) => {
-    db.query("SELECT * FROM activities ORDER BY date DESC", (err, data) => {
+    console.log('GET /activities/list hit'); // debug
+    db.query('SELECT * FROM activities ORDER BY date DESC', (err, data) => {
         if (err) throw err;
         res.render('activities', { activities: data });
     });
@@ -31,6 +33,7 @@ router.get('/list', (req, res) => {
 
 // SEARCH — show form
 router.get('/search', (req, res) => {
+    console.log('GET /activities/search hit'); // debug
     res.render('search');
 });
 
@@ -50,3 +53,4 @@ router.post('/search', (req, res) => {
 });
 
 module.exports = router;
+

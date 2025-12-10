@@ -1,0 +1,69 @@
+Outline
+
+This application is a health and fitness tracking system that allows users to add, view and search their daily activities such as running, gym workouts, and cycling. The purpose of the app is to help users monitor their fitness progress by storing essential workout details including date, activity type, duration, calories burned and notes. The application demonstrates the core full-stack skills learned in the Web Applications labs, including routing, form handling, server-side rendering with EJS, and MySQL database integration. The app is deployed on the Goldsmiths server and can also be installed and run locally using Node.js.
+
+Architecture
+
+The application follows a simple two-tier architecture.
+Application tier (Node.js + Express): Handles routing, form processing, search logic, and rendering EJS templates.
+Data tier (MySQL): Stores all activity data.
+Express routes communicate with MySQL using mysql2. EJS renders HTML templates.
+
+User Functionality
+
+The application provides a simple and clear user interface.
+
+Home Page
+
+Shows a welcome message and links to all other pages:
+
+Add Activity
+
+View Activities
+
+Search Activities
+
+About Page
+
+Add Activity
+
+Users can enter a new activity using a form.
+Fields include date, type, duration, calories and notes.
+When submitted, data is stored in the MySQL database and user is redirected to the activities list.
+
+View Activities
+
+Displays all activities sorted by date (most recent first).
+Uses EJS loops to display each activity clearly.
+
+Search Activities
+
+Allows searching by activity type or keywords in notes.
+Returns matching results or shows "no results".
+
+About Page
+
+Provides simple information about the purpose of the app.
+
+Screenshots to include (you take them quickly):
+
+Home page
+
+Add activity page
+
+Activities list
+
+Search page & results
+
+Advanced Techniques (optional but useful)
+
+Use of EJS partials for header and footer
+
+Use of MySQL placeholders (?) to prevent SQL injection
+
+Using environment variables with .env
+
+Using modular routing (main.js, activities.js)
+
+Deployment configuration for Goldsmiths VM
+
