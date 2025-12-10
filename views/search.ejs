@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%- include('header') %>
 
 <h2>Search Activities</h2>
@@ -8,9 +9,25 @@
 
     <label>Keyword (in notes):</label>
     <input type="text" name="keyword"><br><br>
+=======
+<%- include('partials/header') %>
+
+<h2>Search Activities</h2>
+
+<form method="POST" action="/activities/search">
+    <label>Activity Type:</label>
+    <input type="text" name="type" placeholder="Running">
+
+    <label>Keyword in Notes:</label>
+    <input type="text" name="keyword" placeholder="morning">
+>>>>>>> 877ebefa4e4dc468c7cdf620799b91b58d9b1556
 
     <button type="submit">Search</button>
 </form>
 
+<<<<<<< HEAD
 <%- include('footer') %>
 
+=======
+<%- include('partials/footer') %>
+>>>>>>> 877ebefa4e4dc468c7cdf620799b91b58d9b1556

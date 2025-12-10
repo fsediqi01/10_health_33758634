@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%- include('header') %>
 
 <h2>Add Activity</h2>
@@ -25,3 +26,29 @@
 
 
 
+=======
+<%- include('partials/header') %>
+
+<h2>Add Activity</h2>
+
+<form method="POST" action="/activities/add">
+    <label>Date:</label>
+    <input type="date" name="date" required>
+
+    <label>Activity Type:</label>
+    <input type="text" name="type" placeholder="Running, Cycling, Gym..." required>
+
+    <label>Duration (minutes):</label>
+    <input type="number" name="duration" required>
+
+    <label>Calories Burned:</label>
+    <input type="number" name="calories">
+
+    <label>Notes:</label>
+    <textarea name="notes" placeholder="Optional details..."></textarea>
+
+    <button type="submit">Save Activity</button>
+</form>
+
+<%- include('partials/footer') %>
+>>>>>>> 877ebefa4e4dc468c7cdf620799b91b58d9b1556

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%- include('header') %>
 
 <h2>Search Results</h2>
@@ -20,3 +21,26 @@
 
 <%- include('footer') %>
 
+=======
+<%- include('partials/header') %>
+
+<h2>Search Results</h2>
+
+<ul>
+  <% if (results.length === 0) { %>
+    <p>No matching activities found.</p>
+  <% } else { %>
+    <% results.forEach(r => { %>
+      <li>
+        <strong><%= r.type %></strong> — <%= r.date %>
+        <br>Duration: <%= r.duration %> mins
+        <br>Calories: <%= r.calories %>
+        <br>Notes: <%= r.notes %>
+        <hr>
+      </li>
+    <% }) %>
+  <% } %>
+</ul>
+
+<%- include('partials/footer') %>
+>>>>>>> 877ebefa4e4dc468c7cdf620799b91b58d9b1556
