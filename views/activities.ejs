@@ -1,21 +1,20 @@
-<%- include('partials/header') %>
-
-<h2>All Activities</h2>
-
-<ul>
-  <% if (activities.length === 0) { %>
-    <p>No activities found.</p>
-  <% } else { %>
-    <% activities.forEach(a => { %>
-      <li>
-        <strong><%= a.type %></strong> — <%= a.date %>
-        <br>Duration: <%= a.duration %> minutes
-        <br>Calories: <%= a.calories %>
-        <br>Notes: <%= a.notes %>
-        <hr>
-      </li>
-    <% }) %>
-  <% } %>
-</ul>
-
-<%- include('partials/footer') %>
+<%- include('header') %>
+ 
+<h2>Your Activities</h2> 
+<% if (activities && activities.length > 0) { %>
+    <ul>
+        <% activities.forEach(a => { %>
+            <li>
+                <strong><%= a.type %></strong> —
+                <%= a.duration %> mins —
+                <%= a.calories %> calories —
+                <%= new Date(a.date).toDateString() %><br>
+                Notes: <%= a.notes %>
+            </li>
+        <% }) %>
+    </ul> <% } else { %>
+    <p>No activities found.</p> 
+<% } %> 
+<a href="/activities/add">Add New Activity</a>
+ 
+<%- include('footer') %>
